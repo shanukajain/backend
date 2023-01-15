@@ -8,7 +8,7 @@ const port=process.env.port;
 console.log(port)
 
 const app=express();
-app.use("/user",userRouter);
+app.use("/",userRouter);
 app.use("/product",ProdcutRouter)
 app.use(cors());
 

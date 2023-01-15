@@ -9,13 +9,14 @@ userRouter.use(cors());
 require("dotenv").config();
 const key=process.env.key;
 userRouter.get("/",async(req,res)=>{
-        try {
-            let data=await UserModel.find();
-            res.send(`${data}`);
-        } catch (error) {
-            console.log(error);
-            res.send("error");
-        }
+        // try {
+        //     let data=await UserModel.find();
+        //     res.send(`${data}`);
+        // } catch (error) {
+        //     console.log(error);
+        //     res.send("error");
+        // }
+        res.send("home page");
 })
 userRouter.post("/create",async(req,res)=>{
     try {
